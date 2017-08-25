@@ -14,4 +14,24 @@ public static void bubbleSort (ArrayList<Object[]> arr)
         }
     }
     
-    Here is my bubble sort, can you do one of the other sorts please?
+    //Here is my bubble sort, can you do one of the other sorts please?
+    
+    
+public void InsertionSort(ArrayList<Object[]> title)
+    {
+        int j; // the number of items sorted so far
+        //ArrayList<Object[]> key = new ArrayList();
+        Object[] key; // the item to be inserted
+        int i;
+        for (j = 1; j < title.size(); j++) // Start with 1 (not 0)
+        {
+            key = title.get(j);
+            for(i = j - 1; (i >= 0) && ((title.get(i)[1]).toString().compareToIgnoreCase(key[1].toString())<0); i--) // Smaller values are moving up
+            {
+                title.set(i + 1,  title.get(i));
+            }
+            title.set(i + 1,  key); // Put the key in its proper location
+        }
+    }
+    
+    // Insertion sort subitted.
