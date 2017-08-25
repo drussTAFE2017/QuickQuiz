@@ -35,3 +35,30 @@ public void InsertionSort(ArrayList<Object[]> title)
     }
     
     // Insertion sort subitted.
+    
+    private void selectionSort(ArrayList<Object[]> dataValue)
+    {
+        tempValues.clear();
+        int j;
+        int first;
+        Object[] key;
+        for(index = dataValue.size()-1; index > 0; index--)
+        {
+            first = 0;
+            for(j = 1; j <= index; j++)
+            {
+                if(dataValue.get(j)[2].toString().compareToIgnoreCase(dataValue.get(first)[2].toString())>0)
+                {
+                    first = j;
+                }
+                key = dataValue.get(first);
+                dataValue.set(first, dataValue.get(index));
+                dataValue.set(index, key);
+            }
+        }
+        for(index = 0; index < dataValue.size(); index++)
+        {
+            tempValues.add(dataValue.get(index));
+        }          
+    }
+    // Selection Sort subitted.
